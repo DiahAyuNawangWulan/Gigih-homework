@@ -1,0 +1,8 @@
+html {
+    font: 100% / 1.5 "Lato", "Hiragino Maru Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic", sans-serif;
+    background-color: blanchedalmond;
+  }
+h1, h2, h3, h4, h5, h6, p, div {
+    color: #2b546a;
+    font-weight: normal;
+ }
