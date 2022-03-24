@@ -1,5 +1,3 @@
-import App from './App';
-
 const data = {
     album: {
       album_type: "album",
@@ -77,4 +75,4 @@ const data = {
     uri: "spotify:track:3z8h0TU7ReDPLIbEnYhWZb"
   };      
     
-export default App
+export default data;

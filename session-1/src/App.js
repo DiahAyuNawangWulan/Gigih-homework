@@ -1,23 +1,14 @@
-import shawn from './shawn.jpg';
 import './App.css';
-
+import data from './API.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>PlayList Song</h1>
-        <img src={shawn} className="App-logo" alt="shawn" />
-        <p>Create Playlist</p>
-        <p>
-          Tittle : Imagination<br/>
-          Artist : Shawn Mendes<br/>
-        </p>
-        <input
-        type='submit'
-        value='Search'
-        />
-        
+        <img className="album" id="albumImage" src={data.album.images[0].url} alt="albumImage"/>
+        <h1 className="songTitle">{data.name}</h1>
+        <h2 className="songArtist">{data.artist[0].name}</h2>
+        <a href="https://reactjs.org" className="playSong buttonTemplate"><span>&#x266A;</span>Select</a>
       </header>
     </div>
   );
