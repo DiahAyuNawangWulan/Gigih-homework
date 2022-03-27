@@ -1,3 +1,4 @@
+
 import './App.css';
 import SongTitle from './components/Song/Song';
 
@@ -6,11 +7,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <SongTitle/>
+        
       </header>
     </div>
-  );
+  )
   
-}
+};
 
 
 
