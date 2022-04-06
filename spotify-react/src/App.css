@@ -1,13 +1,13 @@
 .App {
   text-align: top;
+  background-color: papayawhip;
+  color:blueviolet;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
-
 
 .App-header {
   background-color: #C0C0C0;
