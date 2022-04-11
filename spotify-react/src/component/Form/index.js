@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { addTracksToPlaylist, createPlaylist } from '../../lib/fetchApi';
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { addTracksToPlaylist, createPlaylist } from "../../lib/fetchApi";
 
 
 const sendFormNetworkCall = (data) => console.log(data);
 
-const Form = ({ userId, uriTracks }) =>{
-   const accessToken = useSelector((state)=>state.auth.accessToken);
+const Form = ({ uriTracks }) =>{
+    const accessToken = useSelector((state)=>state.auth.accessToken);
+    const userId = useSelector((state) => state.auth.user.id);
     const [form, setForm] = useState({
-        title:'',
-        description:''
-    });
+         title:'',
+         description:''
+     });
 
     
     const handleForm = async (e) =>{
@@ -25,11 +26,11 @@ const Form = ({ userId, uriTracks }) =>{
     
             await addTracksToPlaylist(accessToken, responseCreatePlaylist.id, uriTracks);
     
-            alert('Playlist created successfully');
+            alert("Playlist created successfully");
     
             setForm({ title: '', description: '' });
           } catch (error) {
-            alert('error');
+            alert("error");
           }
     }
 
@@ -50,10 +51,10 @@ const Form = ({ userId, uriTracks }) =>{
                     <div className="title">
                         <p htmlFor="title">Title</p>
                         <input
-                            className='input'
+                            className="input"
                             minLength={10}
                             type="text" 
-                            name='title' 
+                            name="title" 
                             value={form.title} 
                             onChange={handleChange}
                             required 
@@ -62,9 +63,9 @@ const Form = ({ userId, uriTracks }) =>{
                     <div className="desc">
                         <p htmlFor="description">Description</p>
                         <input
-                            className='input'
+                            className="input"
                             type="text" 
-                            name='description' 
+                            name="description" 
                             value={form.description} 
                             onChange={handleChange}  
                         />
