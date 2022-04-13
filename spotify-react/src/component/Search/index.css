@@ -1,0 +1,13 @@
+.submitsearch {
+    border-radius: 3px;
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid;
+    border-color:rgb(157, 165, 238);
+    margin-bottom: 5px;
+}
+
+.form-input {
+  font-size: 20px;
+  margin-left:5px;
+}

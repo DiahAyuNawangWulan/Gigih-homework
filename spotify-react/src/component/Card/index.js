@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import "./index.css";
 
 const Card=({title,artist,img,toggleSelect})=> {
   const [isSelected, setIsSelected] = useState(false);

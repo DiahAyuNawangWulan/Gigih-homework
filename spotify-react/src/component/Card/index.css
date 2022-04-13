@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}  
+
+* {
+    box-sizing: border-box;
+}
+
+.Card {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid rgb(199, 205, 255);
+    color: rgb(248, 245, 245);
+    border-radius: 5px;
+    padding: 5px;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(5, 128, 128);
+    margin: 5px;
+    float: left;
+    font-size:12px;
+}
+
+.card-wrapper {
+    flex-direction: column;
+}
+
+.card_img{
+    width: 100px;
+    height: 100px;
+    border: 1px;
+    border-radius: 3px;
+}
+
+.card_album{
+    display: grid;
+    grid-template-columns: 50%;
+    grid-column: 2;
+    color: whitesmoke;
+    font-size: 13px;
+    border: none;
+    margin: 5px;
+    float: right;
+}
+
+.card_artist{
+    color: white;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-column: 2;
+    font-size: 13px;
+    margin: 5px;
+    float: right;
+}
+
+.btn-select{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: justify;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #000000;
+    color: white;
+    float: left;
+}

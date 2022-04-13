@@ -1,6 +1,7 @@
 import React, { useState, useEffect }from 'react'
 import config from '../../lib/config'
 import { useSelector } from 'react-redux';
+import './index.css'
 const Search= ({ onSuccess}) =>{
   const accessToken = useSelector((state)=>state.auth.accessToken);
 

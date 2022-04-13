@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { addTracksToPlaylist, createPlaylist } from "../../lib/fetchApi";
-
+import "./index.css";
 
 const sendFormNetworkCall = (data) => console.log(data);
 
