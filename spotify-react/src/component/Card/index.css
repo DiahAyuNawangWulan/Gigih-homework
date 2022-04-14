@@ -34,31 +34,25 @@ code {
 }
 
 .card_img{
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
     border: 1px;
     border-radius: 3px;
 }
 
 .card_album{
     display: grid;
-    grid-template-columns: 50%;
-    grid-column: 2;
     color: whitesmoke;
-    font-size: 13px;
+    font-size: 17px;
     border: none;
-    margin: 5px;
-    float: right;
+    margin: 10px;
 }
 
 .card_artist{
     color: white;
     display: grid;
-    grid-template-columns: 50%;
-    grid-column: 2;
-    font-size: 13px;
-    margin: 5px;
-    float: right;
+    font-size: 17px;
+    margin: 10px;
 }
 
 .btn-select{
@@ -72,4 +66,9 @@ code {
     background-color: #000000;
     color: white;
     float: left;
+}
+.btn-wrapper {
+    padding: 3px;
+    margin: 5px;
+    border-radius: 3px;
 }
