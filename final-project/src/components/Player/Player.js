@@ -1,16 +1,19 @@
 import React from "react";
+import Body from "../Body/Body";
+import Sidebar from "../Sidebar/Sidebar";
+import Footer from "../Footer/Footer";
 import './Player.css';
+import { TableBody } from "@material-ui/core";
 
 function Player({spotify}) {
     return (
         <div className="player">
             <div className="player__body">
-
-            {/* <h1> Congratulation, you were here </h1>
-            <h2> Keep spirit, you can pass it</h2>
-            <h3>FIGHTING LUVV</h3> */}
-
+                <Sidebar/>
+                <Body/>
             </div>
+
+            <Footer/>
         </div>
     );
 }
