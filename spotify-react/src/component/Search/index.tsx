@@ -3,6 +3,16 @@ import { searchTrack } from "../../lib/fetchApi";
 import { useSelector } from "react-redux";
 import Button from '@mui/material/Button';
 import { TRootState } from "../../store";
+import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
+import search from ".";
+import store from "../../store";
+
+test('should show search', () => {
+  render(
+      <Provider store={store}><Search /></Provider>);
+  expect(screen.getByTestId("Search")).toBeInTheDocument()
+}); 
 
 interface IProps{
   onSuccess:(tracks:any[], text:string)=>void;
@@ -39,6 +49,7 @@ const Search : React.FC<IProps> = ({ onSuccess }) => {
         className="form-search-input"
         required
         onChange={handleInput}
+         data-testid="Search"
       />
       <Button type="submit" variant="contained" className="btn-search">
         Search
