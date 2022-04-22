@@ -9,7 +9,8 @@ import { getTokenFromUrl } from '../Spotify/Spotify';
 
 function Sidebar() {
     const [{playlists}, dispatch] = useDataLayerValue ();
-    console.log(playlists);
+    // console.log(playlists);
+
     return(
         <div className="sidebar">
             <img 
@@ -25,6 +26,11 @@ function Sidebar() {
             <br/>
             <strong className="sidebar__title">PLAYLISTS</strong>
             <hr/>
+
+            <SidebarOption title="MooD Booater"/>
+            <SidebarOption title="Healinng Playlist"/>
+            <SidebarOption title="Morning Vibes"/>
+            <SidebarOption title="Sleep Playlist"/>
 
             {playlists?.items?.map(playlist => (
                 <SidebarOption title={playlist.name}/>

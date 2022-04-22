@@ -15,6 +15,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
     "hash-value": "^2.0.1",
+    "hooks-for-redux": "^2.0.3",
     "object-hash": "^3.0.0",
     "oidc-token-hash": "^4.0.0",
     "pusher-client": "^1.1.0",

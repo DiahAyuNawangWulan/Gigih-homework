@@ -19,12 +19,12 @@ const [{ user, token }, dispatch] = useDataLayerValue();
     const _token = hash.access_token;
 
     if (_token) {
-      spotify.setAccessToken(_token);
       dispatch ({
         type: "SET_TOKEN",
         token: _token,
       });
 
+      spotify.setAccessToken(_token);
       spotify.getMe().then((user) => {
         dispatch ({
           type: "SET_USER",
@@ -38,6 +38,13 @@ const [{ user, token }, dispatch] = useDataLayerValue();
           playlists: playlists,
         });
       });
+
+      spotify.getPlaylist("37i9dQZEVXcXdwoE3wbB2M").then (response =>
+        dispatch ({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        })
+      );
     }
 
     // console.log ("I have a token", hash);
